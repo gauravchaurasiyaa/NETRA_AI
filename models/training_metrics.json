@@ -1,0 +1,40 @@
+{
+  "model": "EfficientNet-B0",
+  "dataset": "APTOS-derived 224x224 Gaussian Filtered",
+  "dataset_structure": "Folder-based",
+  "class_mapping": {
+    "No_DR": 0,
+    "Mild": 1,
+    "Moderate": 2,
+    "Severe": 3,
+    "Proliferate_DR": 4
+  },
+  "classes": [
+    "No DR",
+    "Mild DR",
+    "Moderate DR",
+    "Severe DR",
+    "Proliferative DR"
+  ],
+  "best_epoch": 10,
+  "best_validation_macro_f1": 0.5206675513071867,
+  "final_validation_metrics": {
+    "loss": 1.0098862644757614,
+    "accuracy": 0.6807639836289222,
+    "balanced_accuracy": 0.5801856888507905,
+    "macro_f1": 0.5206675513071867,
+    "macro_precision": 0.5612917104290659,
+    "macro_recall": 0.5801856888507905
+  },
+  "training_images": 2929,
+  "validation_images": 733,
+  "total_usable_images": 3662,
+  "device": "mps",
+  "epochs_requested": 10,
+  "batch_size": 16,
+  "learning_rate": 0.0001,
+  "seed": 42,
+  "training_time_minutes": 16.337125098705293,
+  "clinical_validation": false,
+  "note": "Research/hackathon training result only. Not a clinically validated diagnostic model."
+}

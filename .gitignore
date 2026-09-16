@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+venv/
+.venv/
+
+backend/uploads/*
+backend/reports/*
+backend/database/*.db
+backend/database/*.sqlite
+backend/database/*.sqlite3
+
+models/*.pth
+models/*.pt
+models/*.onnx
+
+training_outputs/
+
+# Retinal training dataset — keep local, don't upload to GitHub
+dataset/APTOS2019/train_images/*

@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NETRA AI — Explainable Retinal Screening</title>
+
+    <meta
+        name="description"
+        content="NETRA AI — Explainable AI powered diabetic retinopathy screening platform for rural healthcare."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <div class="app-shell">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    ◉
+                </div>
+
+                <div>
+                    <h1>NETRA</h1>
+                    <span>EXPLAINABLE AI</span>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span>AI SYSTEM ONLINE</span>
+            </div>
+
+            <nav class="navigation">
+
+                <button class="nav-item active" data-page="dashboard">
+                    <span>⌂</span>
+                    Dashboard
+                </button>
+
+                <button class="nav-item" data-page="screening">
+                    <span>◉</span>
+                    New Screening
+                </button>
+
+                <button class="nav-item" data-page="cases">
+                    <span>▣</span>
+                    Patient Cases
+                </button>
+
+                <button class="nav-item" data-page="analytics">
+                    <span>◌</span>
+                    AI Analytics
+                </button>
+
+                <button class="nav-item" data-page="workflow">
+                    <span>⌁</span>
+                    Rural Network
+                </button>
+
+                <button class="nav-item" data-page="reports">
+                    <span>▤</span>
+                    Reports
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="model-card">
+                    <div class="model-header">
+                        <span>MODEL ENGINE</span>
+                        <span class="live-label">LIVE</span>
+                    </div>
+
+                    <strong>NETRA-XAI v1.0</strong>
+
+                    <div class="model-progress">
+                        <span></span>
+                    </div>
+
+                    <small>
+                        Explainable screening engine
+                    </small>
+                </div>
+
+                <div class="sidebar-footer">
+                    Prototype • SIH 2026
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div>
+                    <div class="breadcrumb">
+                        NETRA AI / <span id="pageName">Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="top-actions">
+
+                    <div class="network-pill">
+                        <span class="status-dot"></span>
+                        Connected
+                    </div>
+
+                    <button class="icon-button" id="notificationButton">
+                        ♢
+                    </button>
+
+                    <div class="user-profile">
+                        <div class="avatar">DR</div>
+
+                        <div>
+                            <strong>Screening Desk</strong>
+                            <span>Rural Health Centre</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= DASHBOARD ================= -->
+
+            <section class="page active" id="dashboard">
+
+                <div class="hero">
+
+                    <div class="hero-content">
+
+                        <div class="eyebrow">
+                            <span></span>
+                            EXPLAINABLE RETINAL INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            See what the
+                            <span>AI sees.</span>
+                        </h2>
+
+                        <p>
+                            NETRA analyzes retinal images, evaluates image quality,
+                            identifies clinical evidence and explains every screening
+                            result for faster specialist review.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <button
+                                class="primary-button"
+                                id="startScreening"
+                            >
+                                Start Screening
+                                <span>→</span>
+                            </button>
+
+                            <button
+                                class="secondary-button"
+                                data-go="workflow"
+                            >
+                                View Rural Network
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="hero-visual">
+
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+                        <div class="orbit orbit-three"></div>
+
+                        <div class="retina-core">
+                            <div class="retina-inner">
+                                <span>AI</span>
+                            </div>
+                        </div>
+
+                        <div class="orbit-label label-one">
+                            QUALITY
+                        </div>
+
+                        <div class="orbit-label label-two">
+                            XAI
+                        </div>
+
+                        <div class="orbit-label label-three">
+                            GRADE
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon cyan">◉</div>
+
+                        <div>
+                            <span>Screened Today</span>
+                            <strong>248</strong>
+                            <small class="positive">+12.4%</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">◌</div>
+
+                        <div>
+                            <span>AI Processing</span>
+                            <strong>96.8%</strong>
+                            <small>success rate</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">!</div>
+
+                        <div>
+                            <span>Referable Cases</span>
+                            <strong>31</strong>
+                            <small>requiring review</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">✓</div>
+
+                        <div>
+                            <span>Review Time</span>
+                            <strong>18s</strong>
+                            <small>average</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD GRID -->
+
+                <div class="dashboard-grid">
+
+                    <div class="panel large-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-kicker">SCREENING ACTIVITY</span>
+                                <h3>Recent screenings</h3>
+                            </div>
+
+                            <button
+                                class="text-button"
+                                data-go="cases"
+                            >
+                                View all →
+                            </button>
+
+                        </div>
+
+                        <div class="case-list">
+
+                            <div class="case-row">
+
+                                <div class="patient-avatar">P1</div>
+
+                                <div class="case-info">
+                                    <strong>Case #NT-0248</strong>
+                                    <span>Primary Health Centre • 2 min ago</span>
+                                </div>
+
+                                <div class="grade normal">
+                                    <span></span>
+                                    Level 0
+                                </div>
+
+                                <strong class="confidence">
+                                    97.4%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="case-row">
+
+                                <div class="patient-avatar">P2</div>
+
+                                <div class="case-info">
+                                    <strong>Case #NT-0247</strong>
+                                    <span>Rural Clinic • 8 min ago</span>
+                                </div>
+
+                                <div class="grade moderate">
+                                    <span></span>
+                                    Level 2
+                                </div>
+
+                                <strong class="confidence">
+                                    91.2%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="case-row">
+
+                                <div class="patient-avatar">P3</div>
+
+                                <div class="case-info">
+                                    <strong>Case #NT-0246</strong>
+                                    <span>District Centre • 13 min ago</span>
+                                </div>
+
+                                <div class="grade severe">
+                                    <span></span>
+                                    Level 3
+                                </div>
+
+                                <strong class="confidence">
+                                    94.7%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="case-row">
+
+                                <div class="patient-avatar">P4</div>
+
+                                <div class="case-info">
+                                    <strong>Case #NT-0245</strong>
+                                    <span>Primary Health Centre • 21 min ago</span>
+                                </div>
+
+                                <div class="grade mild">
+                                    <span></span>
+                                    Level 1
+                                </div>
+
+                                <strong class="confidence">
+                                    89.5%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel severity-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-kicker">AI DISTRIBUTION</span>
+                                <h3>DR severity</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="donut-container">
+
+                            <div class="donut">
+                                <div class="donut-center">
+                                    <strong>248</strong>
+                                    <span>cases</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="legend">
+
+                            <div>
+                                <span class="legend-dot level0"></span>
+                                No DR
+                                <strong>68%</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot level1"></span>
+                                Mild
+                                <strong>14%</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot level2"></span>
+                                Moderate
+                                <strong>10%</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot level3"></span>
+                                Severe
+                                <strong>5%</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot level4"></span>
+                                Proliferative
+                                <strong>3%</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PIPELINE -->
+
+                <div class="panel pipeline-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-kicker">CLINICAL PIPELINE</span>
+                            <h3>From image to explainable decision</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="pipeline">
+
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">01</div>
+                            <strong>Image</strong>
+                            <span>Fundus capture</span>
+                        </div>
+
+                        <div class="pipeline-line"></div>
+
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">02</div>
+                            <strong>Quality</strong>
+                            <span>Focus & illumination</span>
+                        </div>
+
+                        <div class="pipeline-line"></div>
+
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">03</div>
+                            <strong>Detection</strong>
+                            <span>Retinal evidence</span>
+                        </div>
+
+                        <div class="pipeline-line"></div>
+
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">04</div>
+                            <strong>Grade</strong>
+                            <span>Level 0–4</span>
+                        </div>
+
+                        <div class="pipeline-line"></div>
+
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">05</div>
+                            <strong>Explain</strong>
+                            <span>Grad-CAM + report</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SCREENING ================= -->
+
+            <section class="page" id="screening">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="panel-kicker">NEW ANALYSIS</span>
+                        <h2>Retinal screening</h2>
+                        <p>
+                            Upload a fundus image to run the NETRA screening workflow.
+                        </p>
+                    </div>
+
+                    <div class="prototype-badge">
+                        PROTOTYPE MODE
+                    </div>
+                </div>
+
+
+                <div class="screening-layout">
+
+                    <div class="panel upload-panel">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">STEP 01</span>
+                                <h3>Fundus image</h3>
+                            </div>
+                        </div>
+
+                        <div
+                            class="upload-area"
+                            id="uploadArea"
+                        >
+
+                            <input
+                                type="file"
+                                id="imageInput"
+                                accept="image/png,image/jpeg,image/jpg"
+                                hidden
+                            >
+
+                            <div
+                                class="upload-content"
+                                id="uploadContent"
+                            >
+
+                                <div class="upload-icon">
+                                    ↑
+                                </div>
+
+                                <h3>Drop retinal image here</h3>
+
+                                <p>
+                                    or click to browse from your device
+                                </p>
+
+                                <span class="file-types">
+                                    JPG / JPEG / PNG
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="image-preview"
+                                id="imagePreview"
+                            >
+
+                                <img
+                                    id="previewImage"
+                                    src=""
+                                    alt="Retinal image preview"
+                                >
+
+                                <button
+                                    id="removeImage"
+                                    class="remove-image"
+                                >
+                                    ×
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="primary-button analyze-button"
+                            id="analyzeButton"
+                            disabled
+                        >
+                            Analyze Retina
+                            <span>→</span>
+                        </button>
+
+                        <div class="analysis-status" id="analysisStatus">
+                            Ready for image
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel analysis-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-kicker">STEP 02–05</span>
+                                <h3>AI analysis</h3>
+                            </div>
+
+                            <div class="ai-status">
+                                <span></span>
+                                XAI ENGINE
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="analysis-empty"
+                            id="analysisEmpty"
+                        >
+
+                            <div class="empty-icon">◎</div>
+
+                            <h3>Waiting for retinal image</h3>
+
+                            <p>
+                                Upload an image to see image quality,
+                                DR severity, lesion evidence and explainability.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="analysis-result"
+                            id="analysisResult"
+                        >
+
+                            <div class="result-top">
+
+                                <div class="result-image">
+                                    <img
+                                        id="resultImage"
+                                        src=""
+                                        alt="Analyzed retina"
+                                    >
+                                </div>
+
+                                <div class="result-summary">
+
+                                    <span class="panel-kicker">
+                                        AI SCREENING RESULT
+                                    </span>
+
+                                    <h2 id="severityResult">
+                                        Moderate NPDR
+                                    </h2>
+
+                                    <div class="confidence-ring">
+                                        <strong id="confidenceValue">
+                                            91%
+                                        </strong>
+                                        <span>confidence</span>
+                                    </div>
+
+                                    <div class="referral-alert">
+                                        <span>!</span>
+                                        Referable case — specialist review recommended
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="quality-box">
+
+                                <div>
+                                    <span>IMAGE QUALITY</span>
+                                    <strong id="qualityValue">
+                                        94%
+                                    </strong>
+                                </div>
+
+                                <div class="quality-bar">
+                                    <span id="qualityBar"></span>
+                                </div>
+
+                                <small id="qualityMessage">
+                                    Image is suitable for automated analysis.
+                                </small>
+
+                            </div>
+
+
+                            <div class="evidence-grid">
+
+                                <div class="evidence-card">
+                                    <span class="evidence-icon red">●</span>
+                                    <div>
+                                        <strong id="microValue">4</strong>
+                                        <span>Microaneurysm signals</span>
+                                    </div>
+                                </div>
+
+                                <div class="evidence-card">
+                                    <span class="evidence-icon orange">●</span>
+                                    <div>
+                                        <strong id="hemorrhageValue">2</strong>
+                                        <span>Hemorrhage regions</span>
+                                    </div>
+                                </div>
+
+                                <div class="evidence-card">
+                                    <span class="evidence-icon yellow">●</span>
+                                    <div>
+                                        <strong id="exudateValue">3</strong>
+                                        <span>Exudate regions</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="xai-section">
+
+                                <div class="xai-header">
+                                    <div>
+                                        <span class="panel-kicker">
+                                            EXPLAINABILITY
+                                        </span>
+
+                                        <h3>
+                                            What influenced the AI?
+                                        </h3>
+                                    </div>
+
+                                    <span class="xai-label">
+                                        GRAD-CAM
+                                    </span>
+                                </div>
+
+
+                                <div class="xai-image">
+
+                                    <img
+                                        id="xaiImage"
+                                        src=""
+                                        alt="Explainability visualization"
+                                    >
+
+                                    <div class="attention-label">
+                                        AI attention regions
+                                    </div>
+
+                                </div>
+
+
+                                <div class="evidence-explanation">
+
+                                    <div>
+                                        <span class="explain-dot red"></span>
+
+                                        <div>
+                                            <strong>Microaneurysm evidence</strong>
+                                            <p>
+                                                Small retinal lesion signals contributing
+                                                to the severity assessment.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div>
+                                        <span class="explain-dot orange"></span>
+
+                                        <div>
+                                            <strong>Hemorrhage evidence</strong>
+                                            <p>
+                                                Dark retinal regions associated with
+                                                potential bleeding.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div>
+                                        <span class="explain-dot yellow"></span>
+
+                                        <div>
+                                            <strong>Exudate evidence</strong>
+                                            <p>
+                                                Bright retinal regions considered by
+                                                the screening model.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="secondary-button full-button"
+                                id="reportButton"
+                            >
+                                Generate Screening Report
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= CASES ================= -->
+
+            <section class="page" id="cases">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span class="panel-kicker">PATIENT MANAGEMENT</span>
+                        <h2>Screening cases</h2>
+                        <p>
+                            Recent AI-assisted screening records.
+                        </p>
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        data-go="screening"
+                    >
+                        + New Screening
+                    </button>
+
+                </div>
+
+
+                <div class="panel table-panel">
+
+                    <div class="table-toolbar">
+
+                        <div class="search-box">
+                            <span>⌕</span>
+                            <input
+                                id="caseSearch"
+                                type="text"
+                                placeholder="Search case..."
+                            >
+                        </div>
+
+                        <div class="filter-pills">
+
+                            <button class="filter active">
+                                All
+                            </button>
+
+                            <button class="filter">
+                                Referable
+                            </button>
+
+                            <button class="filter">
+                                Normal
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Case</th>
+                                    <th>Location</th>
+                                    <th>Quality</th>
+                                    <th>DR Grade</th>
+                                    <th>Confidence</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="casesTable">
+
+                                <tr>
+                                    <td>
+                                        <strong>NT-0248</strong>
+                                    </td>
+
+                                    <td>PHC Sitapur</td>
+
+                                    <td>
+                                        <span class="quality-pill good">
+                                            97%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="grade normal">
+                                            <span></span>
+                                            Level 0
+                                        </span>
+                                    </td>
+
+                                    <td>97.4%</td>
+
+                                    <td>
+                                        <span class="status-pill completed">
+                                            Completed
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>NT-0247</strong>
+                                    </td>
+
+                                    <td>Rural Clinic</td>
+
+                                    <td>
+                                        <span class="quality-pill good">
+                                            94%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="grade moderate">
+                                            <span></span>
+                                            Level 2
+                                        </span>
+                                    </td>
+
+                                    <td>91.2%</td>
+
+                                    <td>
+                                        <span class="status-pill review">
+                                            Review
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>NT-0246</strong>
+                                    </td>
+
+                                    <td>District Centre</td>
+
+                                    <td>
+                                        <span class="quality-pill good">
+                                            92%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="grade severe">
+                                            <span></span>
+                                            Level 3
+                                        </span>
+                                    </td>
+
+                                    <td>94.7%</td>
+
+                                    <td>
+                                        <span class="status-pill urgent">
+                                            Priority
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>NT-0245</strong>
+                                    </td>
+
+                                    <td>PHC Barabanki</td>
+
+                                    <td>
+                                        <span class="quality-pill average">
+                                            86%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="grade mild">
+                                            <span></span>
+                                            Level 1
+                                        </span>
+                                    </td>
+
+                                    <td>89.5%</td>
+
+                                    <td>
+                                        <span class="status-pill completed">
+                                            Completed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ANALYTICS ================= -->
+
+            <section class="page" id="analytics">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span class="panel-kicker">AI PERFORMANCE</span>
+                        <h2>Analytics</h2>
+                        <p>
+                            Prototype screening and workflow metrics.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-grid">
+
+                    <div class="metric-card">
+                        <span>Images processed</span>
+                        <strong>8,421</strong>
+                        <small>this month</small>
+                    </div>
+
+                    <div class="metric-card">
+                        <span>Referable detection</span>
+                        <strong>92.1%</strong>
+                        <small>prototype metric</small>
+                    </div>
+
+                    <div class="metric-card">
+                        <span>Avg processing time</span>
+                        <strong>18.4s</strong>
+                        <small>per screening</small>
+                    </div>
+
+                    <div class="metric-card">
+                        <span>Quality rejection</span>
+                        <strong>7.8%</strong>
+                        <small>images flagged</small>
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-main">
+
+                    <div class="panel chart-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-kicker">WEEKLY VOLUME</span>
+                                <h3>Screening throughput</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="bar-chart">
+
+                            <div class="bar-column">
+                                <span>142</span>
+                                <div class="bar" style="height: 55%;"></div>
+                                <small>Mon</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span>168</span>
+                                <div class="bar" style="height: 66%;"></div>
+                                <small>Tue</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span>194</span>
+                                <div class="bar" style="height: 77%;"></div>
+                                <small>Wed</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span>211</span>
+                                <div class="bar" style="height: 84%;"></div>
+                                <small>Thu</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span>248</span>
+                                <div class="bar" style="height: 100%;"></div>
+                                <small>Fri</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span>221</span>
+                                <div class="bar" style="height: 88%;"></div>
+                                <small>Sat</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span>184</span>
+                                <div class="bar" style="height: 73%;"></div>
+                                <small>Sun</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel target-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-kicker">
+                                    SIH TARGET
+                                </span>
+                                <h3>Referable DR</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="target-circle">
+                            <strong>&gt;90%</strong>
+                            <span>Sensitivity target</span>
+                        </div>
+
+                        <div class="target-row">
+                            <span>Specificity target</span>
+                            <strong>&gt;85%</strong>
+                        </div>
+
+                        <small class="disclaimer">
+                            Targets from the problem statement.
+                            Prototype values are not clinical validation.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= WORKFLOW ================= -->
+
+            <section class="page" id="workflow">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span class="panel-kicker">TELEMEDICINE</span>
+                        <h2>Rural screening network</h2>
+                        <p>
+                            Prototype view of a district-level screening workflow.
+                        </p>
+                    </div>
+
+                    <div class="network-pill">
+                        <span class="status-dot"></span>
+                        Network healthy
+                    </div>
+
+                </div>
+
+
+                <div class="workflow-layout">
+
+                    <div class="panel network-panel">
+
+                        <div class="network-map">
+
+                            <div class="map-grid"></div>
+
+                            <div class="map-node node-a">
+                                <span></span>
+                                PHC
+                            </div>
+
+                            <div class="map-node node-b">
+                                <span></span>
+                                Rural Clinic
+                            </div>
+
+                            <div class="map-node node-c">
+                                <span></span>
+                                District Hub
+                            </div>
+
+                            <div class="map-node node-d">
+                                <span></span>
+                                Specialist
+                            </div>
+
+                            <div class="connection connection-a"></div>
+                            <div class="connection connection-b"></div>
+                            <div class="connection connection-c"></div>
+
+                            <div class="data-packet packet-a"></div>
+                            <div class="data-packet packet-b"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="workflow-side">
+
+                        <div class="panel workflow-card">
+
+                            <span class="panel-kicker">PROCESSING</span>
+
+                            <h3>Edge AI node</h3>
+
+                            <div class="workflow-number">
+                                84%
+                            </div>
+
+                            <p>
+                                Current processing utilization
+                            </p>
+
+                            <div class="mini-progress">
+                                <span style="width: 84%;"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel workflow-card">
+
+                            <span class="panel-kicker">THROUGHPUT</span>
+
+                            <h3>Daily capacity</h3>
+
+                            <div class="workflow-number">
+                                1,240
+                            </div>
+
+                            <p>
+                                Images / day
+                            </p>
+
+                        </div>
+
+
+                        <div class="panel workflow-card">
+
+                            <span class="panel-kicker">SPECIALIST QUEUE</span>
+
+                            <h3>Review queue</h3>
+
+                            <div class="workflow-number orange-text">
+                                31
+                            </div>
+
+                            <p>
+                                Cases awaiting review
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= REPORTS ================= -->
+
+            <section class="page" id="reports">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span class="panel-kicker">CLINICAL DOCUMENTATION</span>
+                        <h2>Screening reports</h2>
+                        <p>
+                            Explainable AI report preview.
+                        </p>
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        id="downloadReport"
+                    >
+                        Export Report
+                    </button>
+
+                </div>
+
+
+                <div class="report-preview panel">
+
+                    <div class="report-header">
+
+                        <div class="report-logo">
+                            <div>◉</div>
+
+                            <div>
+                                <strong>NETRA AI</strong>
+                                <span>Explainable Retinal Screening</span>
+                            </div>
+                        </div>
+
+                        <div class="report-id">
+                            REPORT #NT-0247
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-title">
+                        <span>AI-ASSISTED SCREENING REPORT</span>
+                        <h3>Retinal Image Analysis</h3>
+                    </div>
+
+
+                    <div class="report-grid">
+
+                        <div>
+                            <span>Screening date</span>
+                            <strong>13 Sep 2026</strong>
+                        </div>
+
+                        <div>
+                            <span>Case ID</span>
+                            <strong>NT-0247</strong>
+                        </div>
+
+                        <div>
+                            <span>Image quality</span>
+                            <strong>94%</strong>
+                        </div>
+
+                        <div>
+                            <span>AI confidence</span>
+                            <strong>91.2%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-result">
+
+                        <div>
+                            <span>SCREENING RESULT</span>
+                            <strong>Level 2 — Moderate NPDR</strong>
+                        </div>
+
+                        <div class="report-alert">
+                            Referable
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-evidence">
+
+                        <h4>Clinical evidence detected</h4>
+
+                        <div class="report-tags">
+
+                            <span>Microaneurysm signals</span>
+                            <span>Hemorrhage regions</span>
+                            <span>Exudate regions</span>
+                            <span>Grad-CAM attention</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-note">
+
+                        <strong>Clinical review note</strong>
+
+                        <p>
+                            This prototype output is intended to support,
+                            not replace, ophthalmologist review. The AI result
+                            should be validated by a qualified clinician.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="./js/app.js"></script>
+
+</body>
+</html>
